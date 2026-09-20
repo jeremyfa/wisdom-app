@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "npm run build && concurrently --prefix none --kill-others \"chokidar 'src/**/*.hx' 'src/**/*.css' 'web/**' -c 'npm run build:static && npm run build:haxe && npm run build:css'\" \"npm run tauri dev\"",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
