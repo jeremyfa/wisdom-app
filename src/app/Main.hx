@@ -49,12 +49,19 @@ class Main implements X {
 
                     // Always mounted, hidden when there is nothing to show: a
                     // stable child count keeps wisdom matching nodes correctly
-                    // across renders.
+                    // across renders. The settings popup comes from the kit,
+                    // and this application adds its own section inside it.
+                    <div class=${chrome.settingsOpen ? "" : "hidden"}>
+                        <if ${chrome.settingsOpen}>
+                            <SettingsPopup>
+                                <NotesSettings />
+                            </SettingsPopup>
+                        </if>
+                    </div>
+
                     <div class=${model.ui.popup != null ? "" : "hidden"}>
                         <if ${model.ui.popup == ABOUT}>
                             <AboutPopup />
-                        <elseif ${model.ui.popup == SETTINGS}>
-                            <SettingsPopup />
                         </if>
                     </div>
 

@@ -58,8 +58,9 @@ class TopBar extends Component {
                                 onpress=${() -> NotesActions.reveal()} />
                 </Tooltip>
 
-                <IconButton kind="settings" title="Settings"
-                            onpress=${() -> model.ui.popup = SETTINGS} />
+                <IconButton kind="settings"
+                            title=${'Settings (' + Keys.modifierLabel() + ',)'}
+                            onpress=${() -> chrome.settingsOpen = true} />
                 <IconButton kind="info" title="About"
                             onpress=${() -> model.ui.popup = ABOUT} />
             </div>

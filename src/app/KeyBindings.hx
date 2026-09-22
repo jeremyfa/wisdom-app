@@ -7,8 +7,8 @@ import kit.Binding;
  *
  * The dispatching belongs to `kit.Keys` and is not repeated here: standing
  * aside for text fields, resolving Command against Control, keeping a dialog
- * modal. `kit.Keys` also contributes the zoom shortcuts every app wants, so
- * this table holds only what is genuinely ours.
+ * modal. `kit.Keys` also contributes the shortcuts every app wants, the zoom
+ * and the settings, so this table holds only what is genuinely ours.
  *
  * Every binding takes the platform modifier unless it says otherwise.
  */
@@ -17,8 +17,7 @@ class KeyBindings {
     public static var bindings(default, null):Array<Binding> = [
         { key: 'n', description: 'New note', action: () -> NotesActions.focusInput() },
         { key: 's', description: 'Save notes', action: () -> NotesActions.save() },
-        { key: 'o', description: 'Open notes', action: () -> NotesActions.open() },
-        { key: ',', description: 'Settings', action: () -> model.ui.popup = SETTINGS }
+        { key: 'o', description: 'Open notes', action: () -> NotesActions.open() }
     ];
 
     /**
