@@ -23,7 +23,7 @@ class TopBar extends Component {
         <div class="flex-1 min-w-0 flex items-center gap-2">
 
             <div class="flex items-center gap-2 min-w-0">
-                <Icon kind="sparkles" size=16 display="text-t-accent" />
+                <Icon kind=${App.ICON} size=16 display="text-t-accent" />
                 <span class="text-[14px] font-semibold truncate">Wisdom App</span>
                 <if ${model.currentFile != null}>
                     <span class="text-[12px] text-t-text-faint truncate mono">${model.currentFile.name}</span>

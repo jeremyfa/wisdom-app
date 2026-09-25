@@ -26,7 +26,8 @@ class Main implements X {
 
         App.start(({
             model: model,
-            storageKey: 'wisdom-app',
+            // APP_SLUG from project.config.sh.
+            storageKey: App.SLUG,
             onModelLoaded: () -> model.repair(),
             bindings: KeyBindings.bindings,
             onEscape: KeyBindings.onEscape,
